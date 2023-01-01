@@ -3274,3 +3274,13 @@ body.slight #fp-nav ul li .fp-tooltip {
 * PRICEBOX-1
 ************************************************************
 */
+.info-obj .info p{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+@media (max-width: 767px) {
+    .info-obj .info p{
+        width: 100%;
+    }
+}
