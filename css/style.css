@@ -1,0 +1,222 @@
+.gray {
+    background-color: #777;
+    background-image: radial-gradient(
+            circle at 47% 14%,
+            rgba(205, 205, 205, 0.04) 0%,
+            rgba(205, 205, 205, 0.04) 43%,
+            transparent 43%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 35% 12%,
+            rgba(215, 215, 215, 0.04) 0%,
+            rgba(215, 215, 215, 0.04) 4%,
+            transparent 4%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 1% 35%,
+            rgba(24, 24, 24, 0.04) 0%,
+            rgba(24, 24, 24, 0.04) 37%,
+            transparent 37%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 21% 1%,
+            rgba(0, 0, 0, 0.04) 0%,
+            rgba(0, 0, 0, 0.04) 26%,
+            transparent 26%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 23% 82%,
+            rgba(249, 249, 249, 0.04) 0%,
+            rgba(249, 249, 249, 0.04) 60%,
+            transparent 60%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 11% 54%,
+            rgba(251, 251, 251, 0.04) 0%,
+            rgba(251, 251, 251, 0.04) 23%,
+            transparent 23%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 69% 68%,
+            rgba(234, 234, 234, 0.04) 0%,
+            rgba(234, 234, 234, 0.04) 10%,
+            transparent 10%,
+            transparent 100%
+        ),
+        linear-gradient(90deg, #777, #606060);
+}
+.blue {
+    background-color: #2c7ad2;
+    background-image: radial-gradient(
+            circle at 47% 14%,
+            rgba(205, 205, 205, 0.04) 0%,
+            rgba(205, 205, 205, 0.04) 43%,
+            transparent 43%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 35% 12%,
+            rgba(215, 215, 215, 0.04) 0%,
+            rgba(215, 215, 215, 0.04) 4%,
+            transparent 4%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 1% 35%,
+            rgba(24, 24, 24, 0.04) 0%,
+            rgba(24, 24, 24, 0.04) 37%,
+            transparent 37%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 21% 1%,
+            rgba(0, 0, 0, 0.04) 0%,
+            rgba(0, 0, 0, 0.04) 26%,
+            transparent 26%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 23% 82%,
+            rgba(249, 249, 249, 0.04) 0%,
+            rgba(249, 249, 249, 0.04) 60%,
+            transparent 60%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 11% 54%,
+            rgba(251, 251, 251, 0.04) 0%,
+            rgba(251, 251, 251, 0.04) 23%,
+            transparent 23%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle at 69% 68%,
+            rgba(234, 234, 234, 0.04) 0%,
+            rgba(234, 234, 234, 0.04) 10%,
+            transparent 10%,
+            transparent 100%
+        ),
+        linear-gradient(90deg, #2c7ad2, #1568c6);
+}
+
+.panel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* SCROLL DOWN */
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #000;
+    font-size: 16px;
+    overflow: visible;
+}
+.scroll-down .arrow {
+    position: relative;
+    top: 0;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHBhdGggZmlsbD0iYmxhY2siIGQ9Ik00ODMuMiwxOTIuMmMtMjAuNS0yMC41LTUzLjUtMjAuOC03My43LTAuNkwyNTcsMzQ0LjFMMTA0LjUsMTkxLjZjLTIwLjItMjAuMi01My4yLTE5LjktNzMuNywwLjYKCWMtMjAuNSwyMC41LTIwLjgsNTMuNS0wLjYsNzMuN2wxOTAsMTkwYzEwLjEsMTAuMSwyMy40LDE1LjEsMzYuOCwxNWMxMy4zLDAuMSwyNi43LTQuOSwzNi44LTE1bDE5MC0xOTAKCUM1MDMuOSwyNDUuNyw1MDMuNywyMTIuNyw0ODMuMiwxOTIuMnoiLz4KPC9zdmc+);
+    background-size: contain;
+    animation: bottom_to_top 1s infinite;
+}
+@keyframes bottom_to_top {
+    10% {
+        top: 0px;
+    }
+    50% {
+        top: -8px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+body {
+    overscroll-behavior: none;
+    height: 100vh;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    font-family: sans-serif;
+}
+.horizont {
+    overscroll-behavior: none;
+    width: 200%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.nav__logo img {
+    width: 100px;
+    height: auto;
+}
+.btn_square {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.nav__btn:hover svg,
+.nav__btn:active svg {
+    fill: #000;
+}
+.nav__btn {
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #fff;
+    --bs-btn-hover-border-color: #fff;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #fff;
+    --bs-btn-active-border-color: #fff;
+}
+
+.card {
+    background-color: transparent;
+    border: none;
+}
+.card__title {
+    font-size: 24px;
+    font-weight: 700;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about__title{
+    font-weight: 700;
+    color: #fff;
+}
+.about__text{
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 30px;
+}
