@@ -2,76 +2,88 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MONOLOG</title>
-    <link rel="icon" href="./images/favicon.ico">
-    <link rel="stylesheet" href="./libs/bootstrap-5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./libs/aos/dist/aos.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="./libs/bootstrap-5.3.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./libs/aos/dist/aos.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
-    <div class="header">
+    <div class="header" id="home">
         <div class="container position-relative">
             <div class="nav">
                 <a href="#" class="btn btn_square social_btn">
-                    <img src="./images/twitter.svg" alt="">
+                    <img src="./images/twitter.svg" alt="" />
                 </a>
-                <a href="#" class="btn btn_square menu_btn d-block d-sm-none ms-2">
-                    <img src="./images/menu.svg" alt="">
-                </a>
+                <!-- <a href="#" class="btn btn_square menu_btn d-block d-sm-none ms-2">
+                    <img src="./images/menu.svg" alt="" />
+                </a> -->
             </div>
             <div class="d-flex flex-column align-items-center">
-                <img class="header_logo" src="images/logo3lmw.png" alt="">
+                <img class="header_logo" src="images/logo3lmw.png" alt="" />
                 <h1 class="header_logo_title">Monolog</h1>
             </div>
         </div>
     </div>
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
-            <h3 class="about_title title">ABOUT</h3>
+            <h3 class="about_title title" data-aos="fade-down">ABOUT</h3>
             <div class="row flex-column">
                 <div class="col-12">
-                    <div class="card about_card col-5" data-aos="fade-right">
-                        <img src="./images/p2pex.png" alt="" class="about_card_img">
-                        <p class="about_card_text">We offer a peer to peer crypto exchange that has significantly lower
-                            fees
-                            than other exchanges</p>
+                    <div class="card about_card" data-aos="fade-right">
+                        <img src="./images/p2pex.png" alt="" class="about_card_img" />
+                        <p class="about_card_text">
+                            We offer a peer to peer crypto exchange that has
+                            significantly lower fees than other exchanges
+                        </p>
                     </div>
                 </div>
                 <div class="col-12 end_card">
-                    <div class="card about_card col-5" data-aos="fade-left">
-                        <img src="./images/clrloop.png" alt="" class="about_card_img">
-                        <p class="about_card_text">Supports both crypto-to-crypto and fiat-to-crypto trades</p>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="card about_card col-5"  data-aos="fade-right">
-                        <img src="./images/etheqeth.png" alt="" class="about_card_img">
-                        <p class="about_card_text">Sellers listings on Monolog are based on the base price of the
-                            relevant cryptos</p>
-                    </div>
-                </div>
-                <div class="col-12 end_card">
-                    <div class="card about_card col-5" data-aos="fade-left">
-                        <img src="./images/line.png" alt="" class="about_card_img">
-                        <p class="about_card_text">Listings on Monolog are processed on a first-come-first-served basis
+                    <div class="card about_card" data-aos="fade-left">
+                        <img src="./images/clrloop.png" alt="" class="about_card_img" />
+                        <p class="about_card_text">
+                            Supports both crypto-to-crypto and
+                            fiat-to-crypto trades
                         </p>
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="card about_card col-5"  data-aos="fade-right">
-                        <img src="./images/wallet.png" alt="" class="about_card_img">
-                        <p class="about_card_text">We keep the users wallets separate from a pool to provide a safer
-                            platform</p>
+                    <div class="card about_card" data-aos="fade-right">
+                        <img src="./images/etheqeth.png" alt="" class="about_card_img" />
+                        <p class="about_card_text">
+                            Sellers listings on Monolog are based on the
+                            base price of the relevant cryptos
+                        </p>
                     </div>
                 </div>
                 <div class="col-12 end_card">
-                    <div class="card about_card col-5" data-aos="fade-left">
-                        <img src="./images/clrloop.png" alt="" class="about_card_img">
-                        <p class="about_card_text">Listings on Monolog are processed on a first-come-first-served basis
+                    <div class="card about_card" data-aos="fade-left">
+                        <img src="./images/line.png" alt="" class="about_card_img" />
+                        <p class="about_card_text">
+                            Listings on Monolog are processed on a
+                            first-come-first-served basis
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card about_card" data-aos="fade-right">
+                        <img src="./images/wallet.png" alt="" class="about_card_img" />
+                        <p class="about_card_text">
+                            We keep the users wallets separate from a pool
+                            to provide a safer platform
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 end_card">
+                    <div class="card about_card" data-aos="fade-left">
+                        <img src="./images/clrloop.png" alt="" class="about_card_img" />
+                        <p class="about_card_text">
+                            Listings on Monolog are processed on a
+                            first-come-first-served basis
                         </p>
                     </div>
                 </div>
@@ -92,18 +104,25 @@
         </div>
     </section>
 
-    <section class="goal">
+    <section class="goal" id="goal">
         <div class="container">
             <h3 class="goal_title title">GOAL</h3>
-            <p class="goal_text">Our goal is to establish Monolog as a robust exchange with a large and active user
-                base. To help fund the legal challenges and other obstacles we may encounter along the way, we are
-                launching a non-fungible token (NFT). However, it is unlikely that a functional site will be available
-                prior to the launch of the NFT, as we want to avoid potential legal issues and the associated risks.</p>
-            <p class="goal_text">If
-                you hold the Monolog NFT in the future, you may be eligible for fee-free buying and selling of your
-                crypto on our platform. This benefit is still being considered, but our goal is to make the NFT as
-                valuable as possible. Additionally, we plan to regularly introduce new features and improvements to
-                Monolog in the future. This is just the beginning of what we believe will be a major project.</p>
+            <p class="goal_text">
+                Our goal is to establish Monolog as a robust exchange with a
+                large and active user base. To help fund the legal
+                challenges and other obstacles we may encounter along the
+                way, we are launching a non-fungible token (NFT). However,
+                it is unlikely that a functional site will be available
+                prior to the launch of the NFT, as we want to avoid
+                potential legal issues and the associated risks. <br>
+                If you hold the Monolog NFT in the future, you may be
+                eligible for fee-free buying and selling of your crypto on
+                our platform. This benefit is still being considered, but
+                our goal is to make the NFT as valuable as possible.
+                Additionally, we plan to regularly introduce new features
+                and improvements to Monolog in the future. This is just the
+                beginning of what we believe will be a major project.
+            </p>
         </div>
     </section>
 

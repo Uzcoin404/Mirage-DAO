@@ -22,14 +22,14 @@ body {
     letter-spacing: 5px;
     font-family: "Times New Roman", Times, serif;
 }
-.btn_square{
+.btn_square {
     width: 44px;
     height: 44px;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
 }
-.header .nav{
+.header .nav {
     position: absolute;
     top: 10px;
     right: 15px;
@@ -39,7 +39,7 @@ section {
     position: relative;
     background-color: #050505;
     padding: 50px 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .title {
     text-align: center;
@@ -95,4 +95,34 @@ section {
     width: 10px;
     height: 70px;
     background-color: #fff;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .about .container {
+        max-width: none;
+        width: 100%;
+        padding: 0 30px;
+    }
+    .about_card img {
+        max-width: 100px;
+    }
+    .about_card_text {
+        line-height: 20px;
+    }
+}
+@media (max-width: 767px) {
+    .about_card{
+        width: 100%;
+        margin-bottom: 30px;
+        padding-right: 30px;
+    }
+    .end_card{
+        justify-content: center;
+    }
+    .about_lines{
+        display: none;
+    }
+    .goal_text{
+        width: 100%;
+    }
 }
