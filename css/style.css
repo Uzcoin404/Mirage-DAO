@@ -39,6 +39,7 @@ section {
     position: relative;
     background-color: #050505;
     padding: 50px 0;
+    overflow-x: hidden;
 }
 .title {
     text-align: center;
