@@ -1,5 +1,11 @@
 AOS.init();
 
+setTimeout(() => {
+    document.querySelector(".loader-bg").classList.add("active");
+}, 300);
+setTimeout(() => {
+    document.querySelector(".loader-bg").style.display = "none";
+}, 2000);
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const title = document.querySelector(".header_logo_title");
@@ -15,7 +21,7 @@ gsap.from(splitText.chars, {
         from: "edge",
         each: 0.1,
     },
-    delay: 0.5
+    delay: 0.6,
 });
 
 const goalSplitText = new SplitText(goalText, { type: "lines" });
