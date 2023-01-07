@@ -189,7 +189,7 @@ section {
 }
 .about_card img {
     max-width: 150px;
-    height: max-content;
+    height: auto;
     margin-right: 15px;
 }
 .about_card_text {
