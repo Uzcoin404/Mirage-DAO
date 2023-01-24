@@ -2,33 +2,24 @@ a {
     text-decoration: none;
 }
 body {
-    background: #010101;
+    background: #F4EDDE;
     font-family: sans-serif;
+}
+.btn{
+    box-shadow: none !important;
 }
 .header {
     display: flex;
     justify-content: center;
     min-height: 100vh;
 }
-.logo_line {
-    width: 25px;
-    height: 150px;
-    background-color: #fff;
-}
-.logo_line:nth-child(2) {
-    margin: 0 30px;
-}
-.logo_line:first-child,
-.logo_line:last-child {
-    margin-top: -60px;
-}
+
 .header_logo_title {
-    font-size: 44px;
+    font-size: 90px;
     text-align: center;
-    color: #fff;
-    text-transform: uppercase;
     letter-spacing: 5px;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "VT323";
+    color: #000;
 }
 .btn_square {
     width: 44px;
@@ -81,188 +72,4 @@ body {
     border-radius: 150px;
     -webkit-box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3) inset;
     box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3) inset;
-}
-@-webkit-keyframes rotate-360 {
-    from {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-    }
-    to {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-@keyframes rotate-360 {
-    from {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-    }
-    to {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-#rectangle {
-    width: 300px;
-    height: 50px;
-    background-color: white;
-    opacity: 0;
-    transform: rotate(0deg);
-    animation: fadeOutSpin2 2.5s;
-    margin: 0 auto;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    bottom: 50%;
-    left: 50%;
-}
-
-#rectangle2 {
-    width: 300px;
-    height: 50px;
-    background-color: white;
-    opacity: 0;
-    transform: rotate(0deg);
-    animation: fadeOutSpin 2.5s;
-    margin: 0 auto;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    bottom: 50%;
-    left: 50%;
-}
-
-@keyframes fadeOutSpin {
-    from {
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-    to {
-        opacity: 0;
-        transform: rotate(90deg);
-    }
-}
-
-@keyframes fadeOutSpin2 {
-    from {
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-    to {
-        opacity: 0;
-        transform: rotate(-90deg);
-    }
-}
-
-#rectangle {
-    margin-right: 40px;
-}
-
-#rectangle2 {
-    margin-left: 40px;
-}
-
-section {
-    position: relative;
-    background-color: #050505;
-    padding: 50px 0;
-    overflow: hidden;
-}
-.title {
-    text-align: center;
-    font-size: 44px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    color: #fff;
-}
-.about_card {
-    flex-direction: row;
-    align-items: center;
-    border: none;
-    background-color: #111;
-    color: #fff;
-    padding: 20px 15px;
-    width: 45%;
-}
-.about_card img {
-    max-width: 150px;
-    height: auto;
-    margin-right: 15px;
-}
-.about_card_text {
-    font-size: 16px;
-    font-weight: 500;
-    margin: 0;
-}
-.end_card {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.goal {
-    background-color: #070707;
-}
-.goal_text {
-    text-align: center;
-    width: 80%;
-    margin: 0 auto;
-    color: #fff;
-}
-
-.about_lines {
-    position: absolute;
-    top: 140px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-.center_line {
-    width: 10px;
-    height: 70px;
-    background-color: #fff;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .about .container {
-        max-width: none;
-        width: 100%;
-        padding: 0 30px;
-    }
-    .about_card img {
-        max-width: 100px;
-    }
-    .about_card_text {
-        line-height: 20px;
-    }
-}
-@media (max-width: 767px) {
-    .about_card {
-        width: 100%;
-        margin-bottom: 30px;
-        padding-right: 30px;
-    }
-    .end_card {
-        justify-content: center;
-    }
-    .about_lines {
-        display: none;
-    }
-    .goal_text {
-        width: 100%;
-    }
-    #rectangle, #rectangle2{
-        width: 150px;
-        height: 30px;
-    }
-    #rectangle{
-        margin-right: 20px;
-    }
-    #rectangle2{
-        margin-left: 20px;
-    }
 }

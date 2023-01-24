@@ -6,31 +6,24 @@ setTimeout(() => {
 setTimeout(() => {
     document.querySelector(".loader-bg").style.display = "none";
 }, 2000);
-gsap.registerPlugin(ScrollTrigger, SplitText);
 
-const title = document.querySelector(".header_logo_title");
-const goalText = document.querySelector(".goal_text");
-const splitText = new SplitText(title, { type: "chars" });
-gsap.set(title, { perspective: 400 });
+var TypeMachine = function (element, speed) {
+    var element = document.querySelector(element),
+        innerText = element.innerText,
+        speed = speed || 80,
+        i = 0,
+        text;
 
-gsap.from(splitText.chars, {
-    opacity: 0,
-    y: 50,
-    ease: "back(4)",
-    stagger: {
-        from: "edge",
-        each: 0.1,
-    },
-    delay: 0.6,
-});
+    element.innerText = "";
 
-const goalSplitText = new SplitText(goalText, { type: "lines" });
-gsap.from(goalSplitText.lines, {
-    duration: 0.8,
-    opacity: 0,
-    rotationX: -120,
-    force3D: true,
-    transformOrigin: "top center -150",
-    stagger: 0.1,
-    scrollTrigger: ".goal_text",
-});
+    (function type() {
+        if (text === innerText) {
+            return;
+        }
+        text = innerText.slice(0, ++i);
+        element.innerText = text;
+        setTimeout(type, speed);
+    })();
+};
+
+TypeMachine(".header_logo_title", 150);
