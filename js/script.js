@@ -11,7 +11,7 @@ const cursorSpan = document.querySelectorAll(".cursor");
 
 const textArray = [typedText.getAttribute("data-typing")];
 const text2 = typedText2.getAttribute("data-typing");
-const typingDelay = 150;
+const typingDelay = 160;
 const erasingDelay = 100;
 const newTextDelay = 1; // Delay between current and next text
 let textArrayIndex = 0;
@@ -32,7 +32,7 @@ function type() {
             cursorSpan[1].style.display = "block";
             typedText2.textContent += text2.charAt(charIndex2);
             charIndex2++;
-            setTimeout(type, 75);
+            setTimeout(type, 90);
         } else {
             cursorSpan[1].classList.remove("typing");
         }
