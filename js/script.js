@@ -7,7 +7,7 @@
 
 const typedText = document.querySelector(".header_logo_title");
 const typedText2 = document.querySelector(".header_logo_text");
-const cursorSpan = document.querySelector(".cursor");
+const cursorSpan = document.querySelectorAll(".cursor");
 
 const textArray = [typedText.getAttribute("data-typing")];
 const text2 = typedText2.getAttribute("data-typing");
@@ -20,20 +20,25 @@ let charIndex2 = 0;
 
 function type() {
     if (charIndex < textArray[textArrayIndex].length) {
-        if (!cursorSpan.classList.contains("typing"))
-            cursorSpan.classList.add("typing");
+        cursorSpan[1].style.display = "none";
         typedText.textContent += textArray[textArrayIndex].charAt(charIndex);
         charIndex++;
         setTimeout(type, typingDelay);
     } else {
-        if (charIndex < text2.length) {
+        cursorSpan[0].style.display = "none";
+        if (charIndex2 < text2.length) {
+            if (!cursorSpan[1].classList.contains("typing"))
+                cursorSpan[1].classList.add("typing");
+            cursorSpan[1].style.display = "block";
             typedText2.textContent += text2.charAt(charIndex2);
             charIndex2++;
             setTimeout(type, 75);
+        } else {
+            cursorSpan[1].classList.remove("typing");
         }
-        cursorSpan.classList.remove("typing");
         // setTimeout(erase, newTextDelay);
     }
+    return;
 }
 
 function erase() {
@@ -57,5 +62,4 @@ function erase() {
 window.addEventListener("load", function () {
     // On DOM Load initiate the effect
     if (typedText) type();
-    if (typedText2) setTimeout(type2, 1500);
 });
