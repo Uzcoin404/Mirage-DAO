@@ -5,6 +5,7 @@
 //     document.querySelector(".loader-bg").style.display = "none";
 // }, 2000);
 
+const animatedLogo = document.querySelector(".animated_logo");
 const typedText = document.querySelector(".header_logo_title");
 const typedText2 = document.querySelector(".header_logo_text");
 const cursorSpan = document.querySelectorAll(".cursor");
@@ -17,6 +18,9 @@ const newTextDelay = 1; // Delay between current and next text
 let textArrayIndex = 0;
 let charIndex = 0;
 let charIndex2 = 0;
+
+// play gif on website refresh
+animatedLogo.src = animatedLogo.src + "?" + new Date().getTime();
 
 function type() {
     if (charIndex < textArray[textArrayIndex].length) {
