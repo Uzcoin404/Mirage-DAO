@@ -1,29 +1,53 @@
-AOS.init();
+// setTimeout(() => {
+//     document.querySelector(".loader-bg").classList.add("active");
+// }, 300);
+// setTimeout(() => {
+//     document.querySelector(".loader-bg").style.display = "none";
+// }, 2000);
 
-setTimeout(() => {
-    document.querySelector(".loader-bg").classList.add("active");
-}, 300);
-setTimeout(() => {
-    document.querySelector(".loader-bg").style.display = "none";
-}, 2000);
+const typedTextSpan = document.querySelector(".header_logo_title");
+const cursorSpan = document.querySelector(".cursor");
 
-var TypeMachine = function (element, speed) {
-    var element = document.querySelector(element),
-        innerText = element.innerText,
-        speed = speed || 80,
-        i = 0,
-        text;
+const textArray = ["Mirage DAO"];
+const typingDelay = 150;
+const erasingDelay = 100;
+const newTextDelay = 1; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
 
-    element.innerText = "";
+function type() {
+    if (charIndex < textArray[textArrayIndex].length) {
+        if (!cursorSpan.classList.contains("typing"))
+            cursorSpan.classList.add("typing");
+        typedTextSpan.textContent +=
+            textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+    } else {
+        cursorSpan.classList.remove("typing");
+        // setTimeout(erase, newTextDelay);
+    }
+}
 
-    (function type() {
-        if (text === innerText) {
-            return;
-        }
-        text = innerText.slice(0, ++i);
-        element.innerText = text;
-        setTimeout(type, speed);
-    })();
-};
+function erase() {
+    if (charIndex > 0) {
+        if (!cursorSpan.classList.contains("typing"))
+            cursorSpan.classList.add("typing");
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(
+            0,
+            charIndex - 1
+        );
+        charIndex--;
+        setTimeout(erase, erasingDelay);
+    } else {
+        cursorSpan.classList.remove("typing");
+        textArrayIndex++;
+        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+        setTimeout(type, typingDelay + 1100);
+    }
+}
 
-TypeMachine(".header_logo_title", 150);
+document.addEventListener("DOMContentLoaded", function () {
+    // On DOM Load initiate the effect
+    if (textArray.length) setTimeout(type, newTextDelay + 250);
+});

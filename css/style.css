@@ -2,10 +2,10 @@ a {
     text-decoration: none;
 }
 body {
-    background: #F4EDDE;
+    background: rgb(241, 238, 228);
     font-family: sans-serif;
 }
-.btn{
+.btn {
     box-shadow: none !important;
 }
 .header {
@@ -20,6 +20,7 @@ body {
     letter-spacing: 5px;
     font-family: "VT323";
     color: #000;
+    line-height: 70px;
 }
 .btn_square {
     width: 44px;
@@ -44,7 +45,7 @@ body {
     height: 100%;
     z-index: 99999;
 }
-.loader-bg.active{
+.loader-bg.active {
     opacity: 0;
     transition: 0.5s;
 }
@@ -72,4 +73,33 @@ body {
     border-radius: 150px;
     -webkit-box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3) inset;
     box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3) inset;
+}
+
+span.cursor {
+    display: inline-block;
+    background-color: #000;
+    margin-left: 0.1rem;
+    width: 3px;
+    /* font-size: 90px; */
+    animation: blink 1s infinite;
+}
+span.cursor.typing {
+    animation: none;
+}
+@keyframes blink {
+    0% {
+        background-color: #000;
+    }
+    49% {
+        background-color: #000;
+    }
+    50% {
+        background-color: transparent;
+    }
+    99% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: #ccc;
+    }
 }
