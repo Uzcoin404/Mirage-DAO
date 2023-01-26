@@ -24,9 +24,6 @@ body {
     color: #000;
     line-height: 70px;
 }
-.animated_logo{
-    width: 100%;
-}
 .btn_square {
     width: 44px;
     height: 44px;
@@ -109,8 +106,13 @@ span.cursor.typing {
     }
 }
 
-@media (max-width: 576px){
-    .header_logo_title{
+@media (max-width: 1024px) {
+    .animated_logo {
+        width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .header_logo_title {
         font-size: 60px;
     }
 }
