@@ -20,7 +20,6 @@ let charIndex = 0;
 let charIndex2 = 0;
 
 // play gif on website refresh
-// animatedLogo.src = animatedLogo.src + "?" + new Date().getTime();
 
 function type() {
     if (charIndex < textArray[textArrayIndex].length) {
@@ -67,3 +66,5 @@ window.addEventListener("load", function () {
     // On DOM Load initiate the effect
     if (typedText) type();
 });
+if (animatedLogo)
+    animatedLogo.src = animatedLogo.src + "?" + new Date().getTime();
