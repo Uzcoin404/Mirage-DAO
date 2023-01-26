@@ -20,7 +20,7 @@ let charIndex = 0;
 let charIndex2 = 0;
 
 // play gif on website refresh
-animatedLogo.src = animatedLogo.src + "?" + new Date().getTime();
+// animatedLogo.src = animatedLogo.src + "?" + new Date().getTime();
 
 function type() {
     if (charIndex < textArray[textArrayIndex].length) {

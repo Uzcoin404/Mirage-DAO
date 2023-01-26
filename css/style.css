@@ -1,6 +1,9 @@
 a {
     text-decoration: none;
 }
+video {
+    clip-path: inset(1px 1px);
+}
 body {
     background: rgb(241, 238, 228);
     font-family: "VT323", sans-serif;
@@ -11,7 +14,7 @@ body {
 .header {
     display: flex;
     justify-content: center;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .header_logo_title {
@@ -20,6 +23,9 @@ body {
     letter-spacing: 5px;
     color: #000;
     line-height: 70px;
+}
+.animated_logo{
+    width: 100%;
 }
 .btn_square {
     width: 44px;
@@ -100,5 +106,11 @@ span.cursor.typing {
     }
     100% {
         background-color: #ccc;
+    }
+}
+
+@media (max-width: 576px){
+    .header_logo_title{
+        font-size: 60px;
     }
 }
