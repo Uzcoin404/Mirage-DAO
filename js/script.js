@@ -12,7 +12,7 @@ const cursorSpan = document.querySelectorAll(".cursor");
 
 const textArray = [typedText.getAttribute("data-typing")];
 const text2 = typedText2.getAttribute("data-typing");
-const typingDelay = 100;
+const typingDelay = 150;
 const erasingDelay = 100;
 const newTextDelay = 1; // Delay between current and next text
 let textArrayIndex = 0;
@@ -35,7 +35,7 @@ function type() {
             cursorSpan[1].style.display = "block";
             typedText2.textContent += text2.charAt(charIndex2);
             charIndex2++;
-            setTimeout(type, 35);
+            setTimeout(type, 75);
         } else {
             cursorSpan[1].classList.remove("typing");
         }
@@ -65,7 +65,7 @@ function erase() {
 if (animatedLogo)
     animatedLogo.src = animatedLogo.src + "?" + new Date().getTime();
     
-animatedLogo.addEventListener("load", function () {
+document.addEventListener("DOMContentLoaded", function () {
     // On DOM Load initiate the effect
     if (typedText) type();
 });
