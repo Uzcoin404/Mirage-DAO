@@ -62,9 +62,10 @@ function erase() {
     }
 }
 
-window.addEventListener("load", function () {
+if (animatedLogo)
+    animatedLogo.src = animatedLogo.src + "?" + new Date().getTime();
+    
+animatedLogo.addEventListener("load", function () {
     // On DOM Load initiate the effect
     if (typedText) type();
 });
-if (animatedLogo)
-    animatedLogo.src = animatedLogo.src + "?" + new Date().getTime();
